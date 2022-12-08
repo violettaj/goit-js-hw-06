@@ -1,17 +1,19 @@
 const firstBtn = document.querySelector(`[data-action="decrement"]`)
 const secondBtn = document.querySelector(`[data-action="increment"]`)
 const result =document.querySelector("#value")
-let counterValue = 0;
-const decrementValue = () => {
-    let resultDown =counterValue --;
-    result.textContent = resultDown
+
+
+
+let counter = 0;
+
+function incrementValue() {
+  counter += 1;
+  document.getElementById("value").innerHTML = counter;
 }
 
-
-const incrementValue = () => {
-   let resultUp=  counterValue ++
-   result.textContent = resultUp
+function decrementValue() {
+    counter -= 1;
+  document.getElementById("value").innerHTML = counter;
 }
-
 firstBtn.addEventListener("click", decrementValue);
 secondBtn.addEventListener("click", incrementValue);
